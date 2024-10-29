@@ -25,8 +25,9 @@ abstract class Problem {
     }
 
     fun setFeasible(candidate: Solution): Solution {
-        for (i in 0..<dimension) {
+        for (i in 0..<candidate.kandidat.size) {
             if (candidate.kandidat[i] < min[i]) {
+                print("neke")
                 candidate.kandidat[i] = min[i]
             } else if (candidate.kandidat[i] > max[i]) {
                 candidate.kandidat[i] = max[i]

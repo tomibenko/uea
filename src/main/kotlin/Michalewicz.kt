@@ -13,8 +13,8 @@ class Michalewicz (override var dimension: Int) : Problem() {
 
     init {
     dimension = 2
-    min = MutableList(dimension) { }
-    max = MutableList(dimension) { }
+    min = MutableList(dimension) { 0.0}
+    max = MutableList(dimension) { PI}
 }
     override fun fitness(candidate: Solution): Solution {
         candidate.fitnessValue = - (0 until candidate.kandidat.size).sumOf { i ->

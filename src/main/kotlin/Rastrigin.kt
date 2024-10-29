@@ -14,8 +14,8 @@ class Rastrigin  (override var dimension: Int) : Problem() {
 
     init {
         dimension = 2
-        min = MutableList(dimension) { }
-        max = MutableList(dimension) { }
+        min = MutableList(dimension) {-5.12 }
+        max = MutableList(dimension) { 5.12 }
     }
     override fun fitness(candidate: Solution): Solution {
         candidate.fitnessValue = 10.0 * dimension + (0 until dimension).sumOf { i ->

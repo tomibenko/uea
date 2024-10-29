@@ -17,7 +17,8 @@ class Schwefel26(override val dimension: Int) : Problem() {
     }
 
     override fun fitness(candidate: Solution): Solution {
-        candidate.fitnessValue = candidate.kandidat.sumOf { it * sin(sqrt(abs(it))) }
+        val sumTerm = candidate.kandidat.sumOf { it * sin(sqrt(abs(it))) }
+        candidate.fitnessValue = 418.9829 * dimension - sumTerm
         return candidate
     }
 }

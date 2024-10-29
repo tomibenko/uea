@@ -13,8 +13,8 @@ class Styblinski (override var dimension: Int) : Problem() {
 
     init {
         dimension = 2
-        min = MutableList(dimension) { }
-        max = MutableList(dimension) { }
+        min = MutableList(dimension) {-5.0 }
+        max = MutableList(dimension) {5.0}
     }
     override fun fitness(candidate: Solution): Solution {
         candidate.fitnessValue = 0.5 * (0 until candidate.kandidat.size).sumOf { i ->
