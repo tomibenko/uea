@@ -2,13 +2,17 @@ package org.example
 
 import Ackley
 import Bukin
+import Griewank
 import Levy
+import Michalewicz
 import Problem
 import RS
+import Rastrigin
 import Rosenbrock
 import Schwefel26
 import Solution
 import Sphere
+import Styblinski
 import Trid
 import neke.CarromTable
 import kotlin.random.Random
@@ -24,7 +28,12 @@ fun main() {
       Bukin(2),
       CarromTable(2),
       Levy(2),
-      Trid(dimensions)
+      Trid(dimensions),
+      Griewank(dimensions),
+      Michalewicz(dimensions),
+      Rastrigin(dimensions),
+      Styblinski(dimensions)
+
    )
    var algorithm = RS(20000)
    for (problem in problems)
